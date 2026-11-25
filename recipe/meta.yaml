@@ -1,17 +1,17 @@
 {% set name = "pyramid_debugtoolbar" %}
-{% set version = "4.9" %}
+{% set version = "4.13" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 5a1fd20bad4b8a1172f0ef4d22191ba382181206d0e566ffcf03d066b88429d7
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: cf359fb4b42ba804d71330d9dd8389a4e68863d4ff1bf9c13f155c5d597bab1a
 
 build:
   noarch: python
-  number: 2
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
